@@ -3,71 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro de resultados MRS</title>
+    <title>Registro de resultados MRS - Season 3</title>
     <style>
         body { 
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             text-align: center; 
             margin: 0;
             padding: 20px;
-            background-color: #f0f2f5;
-            color: #333;
+            background-color: #15151e; 
+            color: #ffffff; 
         }
-        .container {
-            max-width: 600px;
-            margin: 20px auto;
-            padding: 30px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        .container { 
+            max-width: 700px; 
+            margin: auto; 
+            background: #1f1f27; 
+            padding: 20px 40px 40px; 
+            border-radius: 12px; 
+            border: 1px solid #333;
         }
         .logo-container {
             margin-bottom: 20px;
         }
         .logo-container img {
-            max-width: 250px;
+            max-width: 60%; /* Ajusta este valor para hacer el logo más grande o pequeño */
             height: auto;
+            margin: 10px 0;
         }
-        h1 {
-            color: #1a73e8;
-            margin-bottom: 10px;
+        h1 { 
+            color: #ffffff; 
+            font-size: 2.5em;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
-        .form-container {
-            padding-bottom: 20px;
-            margin-bottom: 20px;
+        h2 {
+            color: #ffffff;
+            border-bottom: 2px solid #e10600;
+            padding-bottom: 10px;
+            margin-top: 30px;
+            text-align: left;
         }
-        .form-group { margin-bottom: 15px; text-align: left; }
-        label { display: block; margin-bottom: 5px; font-weight: bold; }
-        input[type="file"], input[type="date"], select { width: 100%; padding: 10px; border-radius: 4px; border: 1px solid #ccc; box-sizing: border-box; }
-        button { background-color: #1a73e8; color: white; border: none; padding: 12px 20px; font-size: 16px; border-radius: 4px; cursor: pointer; transition: background-color 0.3s; width: 100%; margin-top: 10px; }
-        button:disabled { background-color: #9e9e9e; cursor: not-allowed; }
-        button:hover:not(:disabled) { background-color: #1558b3; }
-        .status-container {
-             margin-top: 30px;
+        .subtitle {
+            font-size: 1.5em;
+            color: #cccccc;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+        .form-group { 
+            margin-bottom: 20px; 
+            text-align: left; 
+        }
+        label { 
+            display: block; 
+            margin-bottom: 8px; 
+            font-weight: bold; 
+            color: #bbbbbb;
+            font-size: 0.9em;
+            text-transform: uppercase;
+        }
+        input[type="file"], input[type="date"], select { 
+            width: 100%; 
+            padding: 12px; 
+            border-radius: 6px; 
+            border: 1px solid #555; 
+            box-sizing: border-box; 
+            background-color: #333;
+            color: #ffffff;
+            font-size: 1em;
+        }
+        input[type="file"]::file-selector-button {
+            background-color: #555;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        button { 
+            background-color: #e10600; /* Rojo F1 */
+            color: white; 
+            border: none; 
+            padding: 15px 20px; 
+            font-size: 18px; 
+            border-radius: 6px; 
+            cursor: pointer; 
+            width: 100%; 
+            margin-top: 20px; 
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #ff1e1e;
+        }
+        button:disabled { 
+            background-color: #555; 
+            cursor: not-allowed; 
         }
         .status-box { 
             margin-top: 10px; 
             padding: 15px; 
-            background-color: #e8f0fe; 
-            border-left: 5px solid #1a73e8; 
+            background-color: #2a2a33; 
+            border-left: 5px solid #e10600; 
             text-align: left; 
-            min-height: 50px;
-            line-height: 1.5;
-        }
-        /* Estilo para el nuevo botón-enlace a Google Sheets */
-        .sheet-link {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 10px 18px;
-            background-color: #34a853; /* Verde de Google Sheets */
-            color: white;
-            text-decoration: none;
-            border-radius: 4px;
-            font-weight: bold;
-            transition: background-color 0.3s;
-        }
-        .sheet-link:hover {
-            background-color: #1e8e3e;
+            min-height: 50px; 
+            line-height: 1.5; 
+            border-radius: 0 6px 6px 0;
         }
     </style>
 </head>
@@ -77,8 +119,8 @@
             <img src="Logo final.png" alt="Logo MRS">
         </div>
         
-        <h1>Registro de resultados MRS</h1>
-        <p>Completa los datos de la carrera y sube la imagen con los resultados.</p>
+        <h1>Registro de Resultados</h1>
+        <p class="subtitle">Season 3</p>
 
         <div class="form-container">
             <div class="form-group">
@@ -87,7 +129,7 @@
                     <option value="Gran-Premio-de-Australia">Gran Premio de Australia</option>
                     <option value="Gran-Premio-de-China">Gran Premio de China</option>
                     <option value="Gran-Premio-de-Japon">Gran Premio de Japón</option>
-                    <option value="Gran-Premio-de-Barein">Gran Premio de Baréin</option>
+                    <option value="Gran-Premio-de-Bahrein">Gran Premio de Bahréin</option>
                     <option value="Gran-Premio-de-Arabia-Saudita">Gran Premio de Arabia Saudita</option>
                     <option value="Gran-Premio-de-Miami">Gran Premio de Miami</option>
                     <option value="Gran-Premio-de-Emilia-Romana">Gran Premio de Emilia-Romaña</option>
@@ -102,14 +144,15 @@
                     <option value="Gran-Premio-de-Italia">Gran Premio de Italia</option>
                     <option value="Gran-Premio-de-Azerbaiyan">Gran Premio de Azerbaiyán</option>
                     <option value="Gran-Premio-de-Singapur">Gran Premio de Singapur</option>
-                    <option value="Gran-Premio-de-los-Estados-Unidos">Gran Premio de los Estados Unidos</option>
-                    <option value="Gran-Premio-de-la-Ciudad-de-Mexico">Gran Premio de la Ciudad de México</option>
-                    <option value="Gran-Premio-de-Sao-Paulo">Gran Premio de São Paulo</option>
+                    <option value="Gran-Premio-de-EEUU-Austin">Gran Premio de Estados Unidos (Austin)</option>
+                    <option value="Gran-Premio-de-Mexico">Gran Premio de la Ciudad de México</option>
+                    <option value="Gran-Premio-de-Brasil-Sao-Paulo">Gran Premio de Brasil (São Paulo)</option>
                     <option value="Gran-Premio-de-Las-Vegas">Gran Premio de Las Vegas</option>
-                    <option value="Gran-Premio-de-Catar">Gran Premio de Catar</option>
-                    <option value="Gran-Premio-de-Abu-Dabi">Gran Premio de Abu Dabi</option>
+                    <option value="Gran-Premio-de-Qatar">Gran Premio de Qatar</option>
+                    <option value="Gran-Premio-de-Abu-Dhabi">Gran Premio de Abu Dhabi</option>
                 </select>
             </div>
+
             <div class="form-group">
                 <label for="division">División:</label>
                 <select id="division" name="division">
@@ -119,14 +162,25 @@
                     <option value="Division-4">División 4</option>
                 </select>
             </div>
+            
             <div class="form-group">
                 <label for="fecha">Fecha de la carrera:</label>
                 <input type="date" id="fecha" name="fecha" required>
             </div>
+            
+            <div class="form-group">
+                <label for="tipoResultado">Tipo de Resultado:</label>
+                <select id="tipoResultado" name="tipoResultado">
+                    <option value="Carrera-Normal">Carrera Normal</option>
+                    <option value="Fin-de-Semana-Sprint">Fin de Semana Sprint</option>
+                </select>
+            </div>
+
             <div class="form-group">
                 <label for="imagenCarrera">Imagen de resultados:</label>
                 <input type="file" id="imagenCarrera" accept="image/png, image/jpeg, image/webp" required>
             </div>
+            
             <button id="btnProcesar">Procesar y Subir Resultados</button>
         </div>
 
