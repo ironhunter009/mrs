@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('Pidiendo URL firmada...');
             divEstado.textContent = 'Pidiendo permiso de subida al servidor...';
             
-            const nombreArchivoUnico = `${selectGranPremio.value}_${selectDivision.value}_${inputFecha.value}_${Date.now()}_${archivo.name}`;
+            const nombreArchivoUnico = `${selectGranPremio.value}_${selectDivision.value}_${inputFecha.value}_${selectTipoResultado.value}_${Date.now()}_${archivo.name}`;
 
             const responseUrl = await fetch(URL_GENERADOR, {
                 method: 'POST',
